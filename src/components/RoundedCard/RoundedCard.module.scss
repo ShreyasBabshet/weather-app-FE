@@ -1,0 +1,30 @@
+.CardContainer {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.452);
+  border-radius: 8rem;
+  padding: 2.5rem 1rem;
+  background: #ffffff33;
+
+  p {
+    text-align: center;
+    color: white;
+  }
+  img {
+    width: 68px;
+    margin-bottom: 2rem;
+  }
+  .Secondary {
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 12px;
+  }
+  .Primary {
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 12px;
+  }
+}

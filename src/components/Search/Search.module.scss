@@ -1,0 +1,56 @@
+.MapIcon {
+  width: 36px;
+  height: 36px;
+  margin-right: 2rem;
+}
+.ButtonContainer {
+  padding: 1rem;
+  width: 3.625rem;
+  height: 3.625rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.445);
+  margin-right: 0rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(211, 208, 208, 0.445);
+  }
+}
+.Location {
+  display: flex;
+  align-items: center;
+  .Place {
+    font-weight: 300;
+    font-size: 2rem;
+    color: white;
+  }
+}
+.SearchContainer {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin: 2.5rem 2rem;
+}
+.InputContainer {
+  position: relative;
+  button {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    background-color: transparent;
+  }
+}
+.Input {
+  height: 4rem;
+  background-color: rgba(255, 255, 255, 0.356);
+  border-radius: 1rem;
+  font-size: 20px;
+  color: rgb(102, 105, 109);
+  padding: 0.5rem;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}

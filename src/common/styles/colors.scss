@@ -1,0 +1,19 @@
+$left-primary-color: #48355b;
+$left-secondary-color: #91bef3;
+
+$left-gradient: linear-gradient(
+  248.66deg,
+  $left-primary-color 0%,
+  $left-secondary-color 100%
+);
+
+$right-primary-color: #c1b0cf;
+$right-secondary-color: #bacee6;
+
+$right-gradient: linear-gradient(
+  248.66deg,
+  $right-primary-color 0%,
+  $right-secondary-color 100%
+);
+
+$text-shadow-color: #726f6f;

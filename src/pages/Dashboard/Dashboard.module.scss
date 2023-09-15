@@ -1,0 +1,17 @@
+@import "../../common/styles/colors.scss";
+
+.MainContainer {
+  width: inherit;
+  height: 100%;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  .Left {
+    width: inherit;
+    background: $left-gradient;
+  }
+  .Right {
+    width: inherit;
+    background: $right-gradient;
+  }
+}

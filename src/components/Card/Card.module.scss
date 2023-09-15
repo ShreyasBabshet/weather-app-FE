@@ -1,0 +1,19 @@
+.CardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.452);
+  border-radius: 1rem;
+  padding: 1rem;
+  background: #ffffff33;
+
+  span {
+    text-align: center;
+  }
+  img {
+    width: 68px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+}
