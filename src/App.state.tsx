@@ -3,11 +3,8 @@ import { Dispatch, PropsWithChildren, createContext, useReducer } from "react";
 import {
   celsiusToFahrenheit,
   fahrenheitToCelsius,
-  getCurrentDate,
-  getFormatedTime,
   getFormatedWeatherData,
   getWeatherIcon,
-  kelvinToCelsius,
 } from "./services/common.service";
 import {
   getSixteenDaysForcast,

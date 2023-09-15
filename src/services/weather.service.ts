@@ -3,7 +3,6 @@ import axiosInstance from "../axios.service";
 export const getWetherData = async (cityName?: string) => {
     try {
         const data = await axiosInstance.get(`/weather?q=${cityName}`);
-        console.log(data)
         return data;
     }
     catch (e) {

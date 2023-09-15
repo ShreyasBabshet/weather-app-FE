@@ -81,9 +81,7 @@ export const getCurrentLocation = async (dispatch: Dispatch<AppAction>) => {
 }
 
 export const getWeatherIcon = (weatherType: any, time: any) => {
-    console.log(weatherType)
     const isDay = isDayTime(time);
-    console.log(isDay);
     switch (weatherType) {
         case "Clouds":
             return isDay ? 'cloudSunny' : 'moonCloudy';

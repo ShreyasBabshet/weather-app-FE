@@ -1,3 +1,4 @@
+@import "../../common/styles/mixins";
 .MapIcon {
   width: 36px;
   height: 36px;
@@ -19,8 +20,7 @@
   }
 }
 .Location {
-  display: flex;
-  align-items: center;
+  @include flex-container(row, unset, center);
   .Place {
     font-weight: 300;
     font-size: 2rem;
@@ -29,8 +29,7 @@
 }
 .SearchContainer {
   width: 90%;
-  display: flex;
-  align-items: center;
+  @include flex-container(row, unset, center);
   margin: 2.5rem 2rem;
 }
 .InputContainer {

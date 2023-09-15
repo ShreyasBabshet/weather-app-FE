@@ -33,11 +33,11 @@ const LeftPanel = ({}: LeftPanelProps) => {
   const weatherIcon = state?.weatherIcon;
 
   const [temperatureArray, setArray] = useState([
-    { temperature: 24, day: "Friday" },
-    { temperature: 30, day: "Friday" },
-    { temperature: 28, day: "Friday" },
-    { temperature: 22, day: "Friday" },
-    { temperature: 29, day: "Friday" },
+    { temperature: 24, day: "Saturday" },
+    { temperature: 30, day: "Sunday" },
+    { temperature: 28, day: "Monday" },
+    { temperature: 23, day: "Tuesday" },
+    { temperature: 29, day: "Wednesday" },
   ]);
   return (
     <div className={styles.Container}>

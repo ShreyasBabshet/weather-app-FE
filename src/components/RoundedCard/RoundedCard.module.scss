@@ -1,9 +1,7 @@
+@import "../../common/styles/mixins";
 .CardContainer {
   width: inherit;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-container(column, space-between, center);
   border: 2px solid rgba(255, 255, 255, 0.452);
   border-radius: 8rem;
   padding: 2.5rem 1rem;
