@@ -7,7 +7,7 @@ import { getCurrentLocation } from "./services/common.service";
 const App = () => {
   const context = useContext(AppContext);
   if (!context) {
-    return <></>;
+    return <h3>Page Unavailable</h3>;
   }
 
   const { dispatch } = context;

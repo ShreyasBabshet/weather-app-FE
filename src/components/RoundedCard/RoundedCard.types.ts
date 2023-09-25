@@ -1,4 +1,4 @@
 export interface RoundedCardProps {
-    primaryTime: any,
+    primaryTime: string,
     secondaryTime: string
 } 

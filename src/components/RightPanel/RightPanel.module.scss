@@ -1,7 +1,7 @@
 @import "../../common/styles/colors";
 @import "../../common/styles/mixins";
 
-.MainContainer {
+.Container {
   width: inherit;
   @include flex-container(column, unset, center);
   color: $text-color;

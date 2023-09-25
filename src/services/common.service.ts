@@ -80,7 +80,7 @@ export const getCurrentLocation = async (dispatch: Dispatch<AppAction>) => {
 
 }
 
-export const getWeatherIcon = (weatherType: any, time: any) => {
+export const getWeatherIcon = (weatherType: string, time: string) => {
     const isDay = isDayTime(time);
     switch (weatherType) {
         case "Clouds":

@@ -1,5 +1,5 @@
 @import "../../common/styles/mixins";
-.CardContainer {
+.Container {
   width: inherit;
   @include flex-container(column, space-between, center);
   border: 2px solid rgba(255, 255, 255, 0.452);

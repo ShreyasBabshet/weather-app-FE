@@ -104,7 +104,7 @@ export const getDashboardData = async (
   }
 };
 
-export const getForcastData = async (latitude: any, longitude: any) => {
+export const getForcastData = async (latitude: number, longitude: number) => {
   try {
     const response = await getSixteenDaysForcast(latitude, longitude);
   } catch (e) {

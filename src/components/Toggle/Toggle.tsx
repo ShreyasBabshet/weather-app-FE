@@ -6,7 +6,7 @@ import { AppContext } from "../../App.state.tsx";
 const Toggle = ({}: ToggleProps) => {
   const context = useContext(AppContext);
 
-  if (!context) return <></>;
+  if (!context) return <h3>Page Unavailable</h3>;
   const { dispatch } = context;
   const [unit, setUnit] = useState("C");
 

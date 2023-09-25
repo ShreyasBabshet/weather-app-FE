@@ -9,15 +9,15 @@ import { useContext } from "react";
 import { AppContext } from "../../App.state.tsx";
 const RightPanel = ({}: RightPanelProps) => {
   const context = useContext(AppContext);
-  if (!context) return <></>;
+  if (!context) return <h3>Page Unavailable</h3>;
   const { state } = context;
-  const sunrise = state?.weatherData?.sunrise;
-  const sunset = state?.weatherData?.sunset;
+  const sunrise = state?.weatherData?.sunrise || "-";
+  const sunset = state?.weatherData?.sunset || "-";
 
   return (
-    <div className={styles.MainContainer}>
+    <section className={styles.Container}>
       <Search />
-      <div className={styles.TimeContainer}>
+      <section className={styles.TimeContainer}>
         <div className={styles.Time}>
           <h3>Sunrise</h3>
           <RoundedCard primaryTime={sunrise} secondaryTime="11:45" />
@@ -30,24 +30,24 @@ const RightPanel = ({}: RightPanelProps) => {
           <h3>Sunset</h3>
           <RoundedCard primaryTime={sunset} secondaryTime="11:45" />
         </div>
-      </div>
-      <div className={styles.Info}>
+      </section>
+      <section className={styles.Info}>
         <div className={styles.Divider}></div>
         <div className={styles.InfoImage}>
-          <img src={infoImage} alt="" />
+          <img src={infoImage} alt="Info icon" />
         </div>
-      </div>
-      <div className={styles.RatioContainer}>
+      </section>
+      <section className={styles.RatioContainer}>
         <div className={styles.Ratio}>
           <h3>Air Quality</h3>
-          <img src={airQualityImage} alt="" />
+          <img src={airQualityImage} alt="air quality Image" />
         </div>
         <div className={styles.Ratio}>
           <h3>UV Index</h3>
-          <img src={uvIndexImage} alt="" />
+          <img src={uvIndexImage} alt="uv index icon" />
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 };
 

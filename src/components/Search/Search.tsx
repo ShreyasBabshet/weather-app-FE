@@ -6,7 +6,7 @@ import { useContext, useState } from "react";
 import { AppContext, setSearchLocation } from "../../App.state.tsx";
 const Search = ({}: SearchProps) => {
   const context = useContext(AppContext);
-  if (!context) return <></>;
+  if (!context) return <h3>Page Unavailable</h3>;
   const { state, dispatch } = context;
   const weatherData = state?.weatherData;
   const [searchOpen, setSearchOpen] = useState(false);
@@ -20,7 +20,7 @@ const Search = ({}: SearchProps) => {
       {!searchOpen ? (
         <>
           <div className={styles.Location}>
-            <img className={styles.MapIcon} src={mapIcon} alt="" />
+            <img className={styles.MapIcon} src={mapIcon} alt="Loaation Icon" />
             <p className={styles.Place}>
               {weatherData?.placeName}, {weatherData?.country}
             </p>
@@ -31,7 +31,11 @@ const Search = ({}: SearchProps) => {
             }}
             className={styles.ButtonContainer}
           >
-            <img className={styles.SearchIcon} src={searchIcon} alt="" />
+            <img
+              className={styles.SearchIcon}
+              src={searchIcon}
+              alt="Search Icon"
+            />
           </button>
         </>
       ) : (
@@ -45,7 +49,11 @@ const Search = ({}: SearchProps) => {
               type="text"
             />
             <button onClick={handleSubmit} className={styles.ButtonContainer}>
-              <img className={styles.SearchIcon} src={searchIcon} alt="" />
+              <img
+                className={styles.SearchIcon}
+                src={searchIcon}
+                alt="Search Icon"
+              />
             </button>
           </div>
         </form>

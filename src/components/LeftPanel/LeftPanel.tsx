@@ -14,80 +14,87 @@ import Card from "../Card/Card.tsx";
 import arrowIcon from "../../assets/arrow.svg";
 import { AppContext } from "../../App.state.tsx";
 import Toggle from "../Toggle/Toggle.tsx";
+
+const weatherIcons: any = {
+  clouds: clouds,
+  sunny: sunny,
+  cloudSunny: cloudSunny,
+  moon: moon,
+  rainyCloud: rainyCloud,
+  moonCloudy: moonCloudy,
+};
+
 const LeftPanel = ({}: LeftPanelProps) => {
   const context = useContext(AppContext);
-  if (!context) return <></>;
+  if (!context) return <h3>Page Unavailable</h3>;
   const { state } = context;
   const weatherData = state?.weatherData;
   const temperatureUnit = state?.temperatureUnit;
 
-  const weatherIcons: any = {
-    clouds: clouds,
-    sunny: sunny,
-    cloudSunny: cloudSunny,
-    moon: moon,
-    rainyCloud: rainyCloud,
-    moonCloudy: moonCloudy,
-  };
-
   const weatherIcon = state?.weatherIcon;
 
-  const [temperatureArray, setArray] = useState([
-    { temperature: 24, day: "Saturday" },
-    { temperature: 30, day: "Sunday" },
-    { temperature: 28, day: "Monday" },
-    { temperature: 23, day: "Tuesday" },
-    { temperature: 29, day: "Wednesday" },
+  const [temperatureArray] = useState([
+    { id: 1, temperature: 24, day: "Saturday" },
+    { id: 2, temperature: 30, day: "Sunday" },
+    { id: 3, temperature: 28, day: "Monday" },
+    { id: 4, temperature: 23, day: "Tuesday" },
+    { id: 5, temperature: 29, day: "Wednesday" },
   ]);
   return (
-    <div className={styles.Container}>
-      <div className={styles.ImageContainer}>
+    <section className={styles.Container}>
+      <section className={styles.ImageContainer}>
         <div className={styles.Img}>
-          <img src={weatherIcons[weatherIcon]} alt="" />
+          <img src={weatherIcons[weatherIcon]} alt="Weather Icon" />
         </div>
         <Toggle />
-      </div>
-      <div className={styles.Temperature}>
+      </section>
+      <section className={styles.Temperature}>
         <div className={styles.Value}>{weatherData?.temperature}</div>
         <div className={styles.Unit}>°{temperatureUnit}</div>
-      </div>
-      <div className={styles.DateContainer}>
+      </section>
+      <section className={styles.DateContainer}>
         <p className={styles.Date}>{weatherData?.date}</p>
         <p className={styles.Day}>
           {weatherData?.day} | {weatherData?.time}
         </p>
-      </div>
-      <div className={styles.AdditionalInfo}>
+      </section>
+      <section className={styles.AdditionalInfo}>
         <p className={styles.info}>
-          <img className={styles.WindIcon} src={windIcon} alt="" />
+          <img className={styles.WindIcon} src={windIcon} alt="Wind Icon" />
           <span>Wind</span>
           <span>{weatherData?.wind}km/h</span>
         </p>
         <span className={styles.divider}>|</span>
         <p className={styles.info}>
-          <img className={styles.WindIcon} src={humIcon} alt="" />
+          <img className={styles.WindIcon} src={humIcon} alt="Humidity Icon" />
           <span>Hum</span>
           <span>{weatherData?.humidity}%</span>
         </p>
         <span className={styles.divider}>|</span>
         <p className={styles.info}>
-          <img className={styles.WindIcon} src={rainIcon} alt="" />
+          <img className={styles.WindIcon} src={rainIcon} alt="Rain Icon" />
           <span>Rain</span>
           <span>{weatherData?.rain}%</span>
         </p>
-      </div>
+      </section>
 
-      <div className={styles.CardContainer}>
+      <section className={styles.CardContainer}>
         <div className={styles.CardsList}>
           {temperatureArray.slice(0, 4).map((item) => {
-            return <Card temperature={item.temperature} day={item.day} />;
+            return (
+              <Card
+                key={item.id}
+                temperature={item.temperature}
+                day={item.day}
+              />
+            );
           })}
         </div>
         <div className={styles.arrowIcon}>
-          <img src={arrowIcon} alt="" />
+          <img src={arrowIcon} alt="Scroll arrow" />
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 };
 
