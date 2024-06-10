@@ -98,7 +98,6 @@ export const getDashboardData = async (
       type: "SET_WEATHER_ICON",
       data: weatherIcon,
     });
-    // getForcastData(weatherData.latitude, weatherData.longitude);
   } catch (e) {
     console.log(e);
   }

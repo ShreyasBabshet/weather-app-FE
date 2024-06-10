@@ -14,6 +14,7 @@ const App = () => {
   const initiat = async () => {
     await getCurrentLocation(dispatch);
   };
+  
   useEffect(() => {
     initiat();
   }, []);
